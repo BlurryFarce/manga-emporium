@@ -1,0 +1,10 @@
+extends common/layout
+
+block content
+    h1 Welcome to Manga Emporium
+    ul
+        each manga in featuredMangas
+            li
+                a(href=`/mangas/${manga._id}`) 
+                    img(src=manga.coverImageUrl, alt=manga.title)
+                    | #{manga.title}
