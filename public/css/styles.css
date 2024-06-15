@@ -225,3 +225,43 @@ ul.adminLinks, ul.adminLinks a {
     padding: 2rem;
     align-items: center;
 }
+#manga-details-section{
+    display: flex;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    align-items: center;
+}
+#manga-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    font-size: 1em;
+}
+#manga-cover h2{
+    padding-bottom: 1em;
+}
+#manga-actions{
+    display: flex;
+    justify-content: space-around;
+}
+.button {
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    background-color: #240115;
+    cursor: pointer;
+    border: none;
+    width: 30%;
+  }
+  .button a, a:link, a:visited{
+    color: white;
+  }
+  
+  .button:hover{
+    border-left: 3px solid #88CCF1;
+  }
