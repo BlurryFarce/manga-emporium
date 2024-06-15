@@ -1,0 +1,13 @@
+extends common/admin-layout
+
+block main-content
+  section#adminHomePage
+    h2 Admin Panel
+    p Admin panel to Add, Update and Delete mangas from store.
+    ul.adminLinks
+        li
+        a(href='/mangas/add') Add Manga
+        li
+        a(href='/admin') Update Manga
+        li
+        a(href='/admin') Delete Manga

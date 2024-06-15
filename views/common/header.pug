@@ -1,0 +1,17 @@
+header#header 
+    h2#site-name 
+        a(href="/") Manga Emporium
+    nav
+        ul
+            li
+                a(href='/') Home
+            li
+                a(href='/mangas') Catalog
+            li
+                a(href='/about') About
+        div.searchBar
+            label(for='searchQuery')
+            input(type='text', name='searchQuery', required, placeholder="Search manga ...")
+        ul.admin-nav
+            li  
+                a(href='/admin') Admin

@@ -16,4 +16,11 @@ router.get('/', async (req, res) => {
     res.render('index', { title: 'Manga Emporium', featuredMangas });
 });
 
+router.get('/about', (req, res) => {
+    res.render('about', { title: 'About' });
+});
+
+router.get('/admin', (req, res) => {
+    res.render('admin', { title: 'Admin' });
+});
 module.exports = router;

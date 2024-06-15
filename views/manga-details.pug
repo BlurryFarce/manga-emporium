@@ -1,0 +1,12 @@
+extends common/layout
+
+block main-content
+    section#manga-details-section
+        div#
+        h2 #{manga.title}
+        img(src=manga.coverImageUrl, alt=manga.title)
+        p By #{manga.author}
+        p Genres: #{manga.genre.join(', ')}
+        p #{manga.description}
+        p Price: $#{manga.price.toFixed(2)}
+        p In Stock: #{manga.stock ? 'Yes' : 'No'}

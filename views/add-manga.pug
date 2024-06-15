@@ -1,0 +1,26 @@
+extends common/admin-layout
+
+block main-content
+    section
+        h2 Add New Manga
+        form(action='/mangas/add', method='POST')
+            div
+                label(for='title') Title:
+                input(type='text', name='title', required)
+            div
+                label(for='author') Author:
+                input(type='text', name='author', required)
+            div
+                label(for='genre') Genre (comma-separated):
+                input(type='text', name='genre', required)
+            div
+                label(for='description') Description:
+                textarea(name='description', required)
+            div
+                label(for='price') Price:
+                input(type='number', name='price', step='0.01', required)
+            div
+                label(for='coverImageUrl') Cover Image URL:
+                input(type='text', name='coverImageUrl', required)
+            div
+                button(type='submit') Add Manga

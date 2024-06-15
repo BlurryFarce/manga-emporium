@@ -5,7 +5,9 @@ html
         link(rel='stylesheet', href='/css/styles.css')
         meta(name='viewport', content='width=device-width, initial-scale=1')
     body
-    include header.pug
+    header#header 
+        h2#site-name 
+            a(href="/") Manga Emporium
     main#main
         block main-content
     include footer.pug

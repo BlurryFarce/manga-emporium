@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const indexRouter = require('./routes/index');
-//const mangasRouter = require('./routes/mangas');
+const mangasRouter = require('./routes/mangas');
 
 const mangaDb = require("./modules/mangas/mangaDB"); //load mangaDB.js
 
@@ -18,12 +18,15 @@ const port = process.env.PORT || "8888";
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
+// set up middleware to parse URL-encoded bodies (form data)
+app.use(express.urlencoded({ extended: true }));
+
 //set up folder for static files
 app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use('/', indexRouter);
-//app.use('/mangas', mangasRouter);
+app.use('/mangas', mangasRouter);
 
 // Error handling
 app.use((request, response,) => {

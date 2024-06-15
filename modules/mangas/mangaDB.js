@@ -75,6 +75,12 @@ async function getFeaturedMangas() {
     return await Manga.find({}).limit(5);
 }
 
+//Function to get a manga by id from the mangas collection
+async function getManga(mangaId) {
+    await connect();
+    return await Manga.findById(mangaId);
+}
+
 //Function to add a movie to the movies collection
 async function addManga(mangaTitle, mangaAuthor, mangaGenre, mangaDescription, mangaPrice, mangaCoverImageUrl) {
     let newManga = new Manga({
@@ -93,4 +99,5 @@ module.exports = {
     initializeMangas,
     getFeaturedMangas,
     addManga,
+    getManga,
 }

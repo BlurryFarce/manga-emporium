@@ -1,10 +1,14 @@
 extends common/layout
 
-block content
-    h1 Welcome to Manga Emporium
-    ul
-        each manga in featuredMangas
-            li
-                a(href=`/mangas/${manga._id}`) 
-                    img(src=manga.coverImageUrl, alt=manga.title)
-                    | #{manga.title}
+block main-content
+    section#homePageSection
+        h2 Welcome to Manga Emporium
+        p Your one-stop shop for all your favorite mangas. Discover a wide variety of titles from all genres.
+        h3 Featured Mangas
+        ul.featured-mangas
+            each manga in featuredMangas
+                li
+                    a(href=`/mangas/${manga._id}`)
+                        img(src=manga.coverImageUrl, alt=manga.title)
+                        h4 #{manga.title}
+                        p By #{manga.author}

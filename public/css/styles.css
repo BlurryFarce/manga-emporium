@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; 
+}
+
+body {
+    font-family: Poppins, Roboto, Open Sans;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+    color: #240115;
+}
+
+/* Header and Navigation Styles */
+header {
+    background-color: #88CCF1;
+    color: #3587A4;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+}
+a, a:visited{
+    text-decoration: none;
+    color: #133C55;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration:none;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+nav ul.admin-nav{
+    justify-content: end;
+}
+main {
+    flex: 1;
+}
+
+.admin-nav{
+    margin-left:auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Main content section */
+section {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer styles */
+footer {
+    background-color: #88CCF1;
+    color: #133C55;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-radius: 50px 50px 0 0;
+}
+
+/* Manga list styles */
+ul.featured-mangas, ul.catalog {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between; 
+}
+
+ul.featured-mangas li, ul.catalog li {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1 1 calc(33.333% - 1rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: calc(33.333% - 1rem);
+    text-decoration: none;
+}
+
+ul.featured-mangas li:hover, ul.catalog li:hover {
+    transform: scale(1.05);
+}
+
+ul.featured-mangas li img, ul.catalog li img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form div:last-child {
+    align-items: center;
+}
+form label {
+    margin-bottom: 0.5rem;
+}
+
+form input, form textarea, form button {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #240115;
+    color: #88CCF1;
+    cursor: pointer;
+    border: none;
+    width: 30%;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+ul.adminLinks, ul.adminLinks a {
+    list-style-type: none;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+#adminHomePage{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+.searchBar input{
+ border-radius: 15px;
+ width: 30em;
+ height: 30px;
+ border-style: solid;
+}
+#homePageSection{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    align-items: center;
+}
+#homePageSection h2, #homePageSection p{
+    padding-bottom: 1em;
+}
+#about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    align-items: center;
+}

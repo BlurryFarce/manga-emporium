@@ -1,0 +1,15 @@
+extends common/layout
+
+block main-content
+    section
+        h2 Manga Catalog
+        ul.catalog
+            each manga in mangas
+                li
+                    a(href=`/mangas/${manga._id}`)
+                        img(src=manga.coverImageUrl, alt=manga.title)
+                        h4 #{manga.title}
+                        p By #{manga.author}
+                        p Genres: #{manga.genre.join(', ')}
+                        p Price: $#{manga.price.toFixed(2)}
+
