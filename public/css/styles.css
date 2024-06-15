@@ -258,8 +258,8 @@ ul.adminLinks, ul.adminLinks a {
     border: none;
     width: 30%;
   }
-  .button a, a:link, a:visited{
-    color: white;
+a.button, a:visited.button{
+    color: white; 
   }
   
   .button:hover{
