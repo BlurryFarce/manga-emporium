@@ -19,7 +19,7 @@
   "homepage": "https://github.com/BlurryFarce/manga-emporium#readme",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "express": "^4.21.0",
     "mongoose": "^8.4.1",
     "pug": "^3.0.3"
   },
